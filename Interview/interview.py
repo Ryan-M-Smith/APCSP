@@ -10,7 +10,7 @@ import os, time, platform
 def clear(timeout: int = 0) -> None:
 	"""
 		Clear the console. on Windows, this calls `cls`. on Unix-based systems
-		(i.e., macOS/Darwin and Linux), this calls `clear`.
+		(i.e., macOS and Linux), this calls `clear`.
 	"""
 
 	time.sleep(timeout)
