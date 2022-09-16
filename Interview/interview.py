@@ -1,5 +1,5 @@
 #
-# FILENAME: main.py | APCSP Interview Project
+# FILENAME: interview.py | APCSP Interview Project
 # DESCRIPTION: Interview the user
 # CREATED: 2022-09-09 @ 11:22 AM
 # COPYRIGHT: Copyright (c) 2022 by Ryan Smith
