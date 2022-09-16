@@ -1,6 +1,9 @@
 # My AP Computer Science Principles Projects
 
-Feel free to check my projects out and download and test them.
+A collection of the projects I made for my AP Computer Science Principles class during the
+2022-2023 school year.
+
+Feel free to check out my projects, download them, and test them.
 
 ## Project index
 
