@@ -5,13 +5,20 @@
 # COPYRIGHT: Copyright (c) 2022 by Ryan Smith
 #
 
-import os, time
+import os, time, platform
 
 def clear(timeout: int = 0) -> None:
-	""" Clear the console. """
+	"""
+		Clear the console. on Windows, this calls `cls`. on Unix-based systems
+		(i.e., macOS/Darwin and Linux), this calls `clear`.
+	"""
 
 	time.sleep(timeout)
-	os.system("clear")
+	
+	if platform.system() == "Windows":
+		os.system("cls")
+	elif platform.system() in ("Darwin", "Linux"):
+		os.system("clear")
 
 def main():
 	""" The main function. """
