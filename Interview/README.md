@@ -1,6 +1,6 @@
 # Interview Project
 
-## A project that asks the user seven questions about themselves.
+## A project that asks the user seven questions about themselves
 
 ## Running
 
