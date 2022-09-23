@@ -1,5 +1,5 @@
 #
-# FILENAME: interview.py | APCSP Gradebook Calculator Project
+# FILENAME: gradebookcalc.py | APCSP Gradebook Calculator Project
 # DESCRIPTION: 
 # CREATED: 2022-09-20 @ 11:50 AM
 # COPYRIGHT: Copyright (c) 2022 by Ryan Smith
