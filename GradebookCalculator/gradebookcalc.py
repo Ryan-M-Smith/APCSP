@@ -1,6 +1,6 @@
 #
 # FILENAME: gradebookcalc.py | APCSP Gradebook Calculator Project
-# DESCRIPTION: 
+# DESCRIPTION: Calculate a student's average score from five grades
 # CREATED: 2022-09-20 @ 11:50 AM
 # COPYRIGHT: Copyright (c) 2022 by Ryan Smith
 #
