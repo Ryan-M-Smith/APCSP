@@ -54,4 +54,4 @@ if __name__ == "__main__":
 	try:
 		sys.exit(main())
 	except (EOFError, KeyboardInterrupt):
-		print("\Quit.")
+		print("\nQuit.")
