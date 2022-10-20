@@ -5,7 +5,9 @@
 # COPYRIGHT: Copyright (c) 2022 by Ryan Smith
 #
 
-from tkinter import ttk
+import locale
+
+from tkinter import StringVar, ttk
 from ui import Window
 
 def main():
@@ -17,17 +19,29 @@ def main():
 
 	MENU_ITEMS = {
 		"Sandwich": 5.50,
-		"Salmon": 7.50,
+		"Salmon     ": 7.50, # Add in some extra spaces to make things look nicer
 		"Fried Chicken": 7.99,
 		"Hamburger": 10.45
 	}
 
+	label = ttk.Label(window, text="Choose an item to add to your order.")
+	window.add_widget(label)
+
+	# Set a default value for the menu dropdown
+	default_val = StringVar(window)
+	default_val.set("Sandwich")
+
+	menu_options = ttk.OptionMenu(window, default_val, *MENU_ITEMS)
+	window.add_widget(menu_options)
+
+	# Display the menu
 	for food, price in MENU_ITEMS.items():
-		item = ttk.Label(menu, text=f"{food}\t${price}")
+		locale.setlocale(locale.LC_ALL, '')
+
+		item = ttk.Label(menu, text=f"{food}\t{locale.currency(price, grouping=True)}")
 		window.add_widget(item)
 
 	window.update()
-	
 
 if __name__ == "__main__":
 	import sys
