@@ -5,27 +5,51 @@
 # COPYRIGHT: Copyright (c) 2022 by Ryan Smith
 #
 
-from tkinter import ttk
-from typing import Tuple
+from collections import namedtuple
+from tkinter import ttk, BOTH
+from typing import Literal
 from ttkthemes import ThemedTk
 
 class Window(ThemedTk):
 	""" The main window of the application. """
 
-	def __init__(self, title: str = "Window", length: int = 500, width: int = 500) -> None:
-		super().__init__(theme="yaru")
+	# Create named tuple to represent the window dimensions
+	__dimensions = namedtuple("WinSize", ["height", "width"])
+
+	def __init__(self, title: str = "Window", height: int = 500, width: int = 500) -> None:
+		super().__init__(theme="black")
 
 		self.title(title)
-		self.geometry(f"{length}x{width}")
+		self.geometry(f"{height}x{width}")
 
-	def get_dimensions(self) -> Tuple[int, int]:
-		return self.winfo_width(), self.winfo_height()
+	def dimensions(self) -> __dimensions:
+		return self.__dimensions(self.winfo_height(), self.winfo_width())
 
 	@staticmethod
-	def add_widget(widget: ttk.Widget) -> None:
+	def add_widget(widget: ttk.Widget, /, fillType: Literal = BOTH, expand: bool = True) -> None:
 		""" Add a widget to the application. """
-		widget.pack()
+		widget.pack(fill=fillType, expand=expand)
 	
 	def update(self) -> None:
 		""" Update the screen with widgets. """
 		self.mainloop()
+
+class GridFrame(ttk.Frame):
+	""" A frame that holds a grid of objects. """
+
+	# Create named tuple to represent the window dimensions
+	__dimensions = namedtuple("FrameSize", ["height", "width"])
+
+	def __init__(self, parent: ttk.Widget, height: int = 500, width: int = 500) -> None:
+		super().__init__(parent, height=height, width=width)
+	
+	def dimensions(self) -> __dimensions:
+		return self.__dimensions(self.winfo_height(), self.winfo_width())
+
+	@staticmethod
+	def add_widget(
+		widget: ttk.Widget, /, row: int = None, column: int = None,
+		padx: int = None, pady: int = None, sticky: Literal = None
+	) -> None:
+		""" Add a widget to the application. """
+		widget.grid(row=row, column=column, padx=padx, pady=pady, sticky=sticky)
