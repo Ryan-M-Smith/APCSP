@@ -52,11 +52,19 @@ def main():
 		"Total": total_var
 	}
 
+	menu_grid = GridFrame(frame, height=height, width=width, borderwidth=1, relief="groove")
+	window.add_widget(menu_grid, fillType=Y, expand=False)
+
 	# Display the menu
-	for food, price in MENU_ITEMS.items():
+	for index, pair in enumerate(MENU_ITEMS.items()):
 		locale.setlocale(locale.LC_ALL, "")
-		item = ttk.Label(frame, text=f"{food}\t\t{locale.currency(price, grouping=True)}", justify=CENTER)
-		window.add_widget(item, fillType=Y)
+
+		# Create a label for each item and its price
+		item = ttk.Label(menu_grid, text=pair[0], justify=CENTER)
+		price = ttk.Label(menu_grid, text=locale.currency(pair[1]), justify=CENTER)
+		
+		menu_grid.add_widget(item, row=index, column=0, padx=10, pady=10, sticky=N+S+E+W)
+		menu_grid.add_widget(price, row=index, column=1, padx=10, pady=10, sticky=N+S+E+W)
 
 	# Add some informational text
 	label = ttk.Label(
@@ -100,7 +108,7 @@ def main():
 	for index, pair in enumerate(DEFAULT_COSTS.items()):
 		locale.setlocale(locale.LC_ALL, "")
 
-		# Create a label for each cost, and a label for the amount owed per category
+		# Create a label for each cost and a label for the amount owed per category
 		title = ttk.Label(selection_grid, text=pair[0], justify=CENTER)
 		amount = ttk.Label(selection_grid, textvariable=pair[1], justify=CENTER)
 		
