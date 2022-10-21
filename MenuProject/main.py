@@ -15,7 +15,7 @@ from ui import *
 from commands import update_order, reset_order, place_order, warn_quit
 
 def main():
-	window = Window(title="Menu")
+	window = Window(title="Menu", theme="black")
 	height, width = window.dimensions()
 
 	frame = ttk.Frame(window, height=height, width=width)

@@ -16,8 +16,8 @@ class Window(ThemedTk):
 	# Create named tuple to represent the window dimensions
 	__dimensions = namedtuple("WinSize", ["height", "width"])
 
-	def __init__(self, title: str = "Window", height: int = 500, width: int = 500) -> None:
-		super().__init__(theme="black")
+	def __init__(self, title: str = "Window", height: int = 500, width: int = 500, theme: str = None) -> None:
+		super().__init__(theme=theme)
 
 		self.title(title)
 		self.geometry(f"{height}x{width}")
