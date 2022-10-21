@@ -24,7 +24,7 @@ def update_order(subtotal: StringVar, tax: StringVar, total: StringVar, itemPric
 	""" Update the user's order on the screen. """
 
 	# Convert the currency into a floating point number
-	locale.setlocale(locale.LC_ALL, "en_US")
+	locale.setlocale(locale.LC_ALL, "")
 	subtotal_val = locale.atof(subtotal.get().strip("$"))
 
 	# Calculate the new prices
@@ -49,7 +49,7 @@ def place_order(subtotal: StringVar, tax: StringVar, total: StringVar) -> None:
 	answer = messagebox.askokcancel(title="Order confirmation", message=f"Would you like to place an order for {subtotal.get()}?")
 	if answer:
 		reset_order(subtotal, tax, total)
-		messagebox.showinfo(title="Information", message="Order placed successfully.")
+		messagebox.showinfo(title="Order confirmation", message="Order placed successfully.")
 
 def warn_quit(window: Window, subtotal: StringVar) -> None:
 	"""
@@ -57,7 +57,7 @@ def warn_quit(window: Window, subtotal: StringVar) -> None:
 		order before quitting the app.
 	"""
 
-	locale.setlocale(locale.LC_ALL, "en_US")
+	locale.setlocale(locale.LC_ALL, "")
 
 	if locale.atof(subtotal.get().strip("$")) == 0:
 		window.destroy()
