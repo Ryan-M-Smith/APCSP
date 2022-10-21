@@ -26,7 +26,7 @@ class Window(ThemedTk):
 		return self.__dimensions(self.winfo_height(), self.winfo_width())
 
 	@staticmethod
-	def add_widget(widget: ttk.Widget, /, fillType: Literal = BOTH, expand: bool = True) -> None:
+	def add_widget(widget: ttk.Widget, *, fillType: Literal = BOTH, expand: bool = True) -> None:
 		""" Add a widget to the application. """
 		widget.pack(fill=fillType, expand=expand)
 	
@@ -51,7 +51,7 @@ class GridFrame(ttk.Frame):
 
 	@staticmethod
 	def add_widget(
-		widget: ttk.Widget, /, row: int = None, column: int = None,
+		widget: ttk.Widget, *, row: int = None, column: int = None,
 		padx: int = None, pady: int = None, sticky: Literal = None
 	) -> None:
 		""" Add a widget to the application. """
