@@ -40,8 +40,11 @@ class GridFrame(ttk.Frame):
 	# Create named tuple to represent the window dimensions
 	__dimensions = namedtuple("FrameSize", ["height", "width"])
 
-	def __init__(self, parent: ttk.Widget, height: int = 500, width: int = 500) -> None:
-		super().__init__(parent, height=height, width=width)
+	def __init__(
+		self, parent: ttk.Widget, height: int = 500, width: int = 500,
+		borderwidth: int = None, relief: str = None
+	) -> None:
+		super().__init__(parent, height=height, width=width, borderwidth=borderwidth, relief=relief)
 	
 	def dimensions(self) -> __dimensions:
 		return self.__dimensions(self.winfo_height(), self.winfo_width())
