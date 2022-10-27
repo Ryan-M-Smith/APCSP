@@ -5,5 +5,6 @@
 # COPYRIGHT: Copyright (c) 2022 by Ryan Smith
 #
 
+BLACK = (0, 0, 0)
 WHITE = (255, 255, 255)
 RED   = (255, 0, 0)
