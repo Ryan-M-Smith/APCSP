@@ -6,14 +6,24 @@
 #
 
 import os, pygame, random, time
-from typing import Tuple
+from typing import Tuple, Union
 
 class Wheel(pygame.sprite.Sprite):
 	__ASSET_PATH = os.path.join("assets", "wheel.png")
 	__x: int
 	__y: int
 
-	def __init__(self, x: int, y: int, *, color: Tuple[int], width: int, height: int) -> None:
+	wheel_data = [
+		"Bankrupt", 6500, 1000, 3000, "Lose a Turn", 7500, 1250, 3500,
+		2000, 5000, "Bankrupt", 20000, 1500, 4000, 1750, 1000, 2000,
+		1250, 5000, 2500, 7500, 10000, 4500, 3500
+	]
+	__reference_index = 0
+
+	__INITIAL_DISTANCE = 17
+	__WHEEL_SECTIONS = 24
+
+	def __init__(self, x: int, y: int, *, width: int, height: int) -> None:
 		""" Create the wheel sprite. """
 		super().__init__()
 
@@ -30,12 +40,21 @@ class Wheel(pygame.sprite.Sprite):
 	def rotate(self, angle: float, x: int, y: int) -> Tuple[pygame.Surface, pygame.Rect]:
 		rotated_image = pygame.transform.rotate(self.image, angle)
 		new_rect = rotated_image.get_rect(center = self.image.get_rect(center = (x, y)).center)
+		
+		# Rotate the wheel data with the wheel
+		self.wheel_data = self.wheel_data[-6:] + self.wheel_data[:-6]
+		self.__reference_index += 6
+		
 		return rotated_image, new_rect
 	
 	def spin(self) -> int:
 		""" Spin the wheel and return the reward. """
 
 		#random.seed(time.time())
-		img, rect = self.rotate(90, 500, 500)
+		img, rect = self.rotate(-90, 500, 500)
 		self.image.fill((255, 255, 255, 0))
 		self.image, self.rect = img, rect
+	
+	def get_selected_index(self) -> Union[str, int]:
+		""" Determine what the wheel landed on. """
+		return self.wheel_data[17]
