@@ -109,7 +109,7 @@ class BoardSpot(Button):
 			messagebox.askokcancel(title="Results", message="Tie")
 
 		self.__current_val.set("O" if self.__current_val.get() == "X" else "X")
-
+		self.disable()
 
 	
 	def get_piece(self) -> str:
