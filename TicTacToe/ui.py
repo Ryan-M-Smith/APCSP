@@ -74,7 +74,6 @@ class BoardSpot(Button):
 	__piece: Optional[str] = None
 	__text: StringVar
 	__current_val: StringVar
-	global value
 
 	def __init__(
 		self, master: Misc | None, *, command: Type[str] | Callable[..., Any],
