@@ -6,16 +6,16 @@
 #
 
 from collections import namedtuple
-from typing import Literal, Optional, Type, Any, Callable, List
+from typing import (
+	Literal, Optional, Type,
+	Any, Callable, List
+)
 
 from tkinter import (
 	ttk, BOTH, StringVar, Misc,
-	Variable, font, Button, Frame,
-	messagebox
+	font, Button, Frame, messagebox
 )
 from ttkthemes import ThemedTk
-
-value = "X"
 
 class Window(ThemedTk):
 	""" The main window of the application. """
