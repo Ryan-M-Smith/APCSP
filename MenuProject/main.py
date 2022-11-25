@@ -11,7 +11,7 @@ from tkinter import (
 	StringVar, ttk
 )
 
-from ui import *
+from ui import Window, GridFrame
 from commands import update_order, reset_order, place_order, warn_quit
 
 def main():
