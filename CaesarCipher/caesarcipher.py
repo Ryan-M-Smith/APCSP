@@ -1,5 +1,5 @@
 #
-# FILENAME: main.py | APCSP Caesar Cipher Project
+# FILENAME: caesarcipher.py | APCSP Caesar Cipher Project
 # DESCRIPTION: Encrypt and decrypt data using a caesar cipher
 # CREATED: 2022-12-05 @ 1:59 PM
 # COPYRIGHT: Copyright (c) 2022 by Ryan Smith

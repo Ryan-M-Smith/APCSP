@@ -1,5 +1,5 @@
 #
-# FILENAME: main.py | APCSP Password Cracker Project
+# FILENAME: pwcrack.py | APCSP Password Cracker Project
 # DESCRIPTION: A brute force password-cracking algorithm
 # CREATED: 2022-12-13 @ 8:52 AM
 # COPYRIGHT: Copyright (c) 2022 by Ryan Smith

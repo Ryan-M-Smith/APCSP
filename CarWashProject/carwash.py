@@ -1,5 +1,5 @@
 #
-# FILENAME: main.py | APCSP Car Wash Project
+# FILENAME: carwash.py | APCSP Car Wash Project
 # DESCRIPTION: Clean and print diagnostic information about user-entered data
 # CREATED: 2022-11-30 @ 12:04 PM
 # COPYRIGHT: Copyright (c) 2022 by Ryan Smith
