@@ -25,4 +25,4 @@ Feel free to check out my projects, download them, and test them.
 | [StatTracker](https://github.com/Ryan-M-Smith/APCSP/tree/master/StatTracker)     | A video game KDA and win/loss tracker. |
 | [TicTacToe](https://github.com/Ryan-M-Smith/APCSP/tree/master/TicTacToe)     | A Tkinter tic-tac-toe game. |
 | [ToDoListProject](https://github.com/Ryan-M-Smith/APCSP/tree/master/ToDoListProject)     | A simple to-do list using Tkinter. |
-| [WHeelOfForture](https://github.com/Ryan-M-Smith/APCSP/tree/master/WheelOfFortune)     | A Wheel of Fortune game using Pygame. |
+| [WheelOfForture](https://github.com/Ryan-M-Smith/APCSP/tree/master/WheelOfFortune)     | A Wheel of Fortune game using Pygame. |
