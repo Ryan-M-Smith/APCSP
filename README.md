@@ -15,7 +15,7 @@ Feel free to check out my projects, download them, and test them.
 | [DragonAdventureProject](https://github.com/Ryan-M-Smith/APCSP/tree/master/DragonAdventureProject)     | A text-based adventure game. |
 | [FoogleProject](https://github.com/Ryan-M-Smith/APCSP/tree/master/FoogleProject)     | A Google search wrapper using Tkinter. |
 | [GradebookCalculator](https://github.com/Ryan-M-Smith/APCSP/tree/master/GradebookCalculator)     | Calculate an overall grade from five individual grades. |
-| [InterviewProject](https://github.com/Ryan-M-Smith/APCSP/tree/master/Interview)     | A command-line interview program that asks you questions. |
+| [InterviewProject](https://github.com/Ryan-M-Smith/APCSP/tree/master/InterviewProject)     | A command-line interview program that asks you questions. |
 | [MenuProject](https://github.com/Ryan-M-Smith/APCSP/tree/master/MenuProject)     | A Tkinter food ordering app. |
 | [PasswordCracker](https://github.com/Ryan-M-Smith/APCSP/tree/master/PasswordCracker)     | A brute-force password cracker for three-letter passwords. |
 | [Practice](https://github.com/Ryan-M-Smith/APCSP/tree/master/Practice)       | Sample, test, and practice code.                          |
